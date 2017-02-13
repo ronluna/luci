@@ -274,6 +274,7 @@ function iface_status(ifaces)
 				ipaddrs    = net:ipaddrs(),
 				ip6addrs   = net:ip6addrs(),
 				dnsaddrs   = net:dnsaddrs(),
+				ip6prefix  = net:ip6prefix(),
 				name       = device:shortname(),
 				type       = device:type(),
 				ifname     = device:name(),
