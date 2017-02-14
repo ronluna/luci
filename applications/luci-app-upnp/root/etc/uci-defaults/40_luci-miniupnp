@@ -1,8 +1,9 @@
 #!/bin/sh
 
 uci -q batch <<-EOF >/dev/null
-	delete ucitrack.minidlna
-	set ucitrack.minidlna=minidlna
+	delete ucitrack.@upnpd[-1]
+	add ucitrack upnpd
+	set ucitrack.@upnpd[-1]=miniupnpd
 	commit ucitrack
 EOF
 
